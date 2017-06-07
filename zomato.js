@@ -9,6 +9,15 @@ $(document).ready(function() {
     var price = $('#price-select').val();
     var distance = $('#distance-select').val();
     var cuisine = $('#cuisine-select').val();
+    var miles = $('#distance-select option:selected').text();
+    $('#map').css({
+      "background-image": "none",
+      "background-color": "white",
+      "color": "black",
+      "height": "28vh",
+      "width": "48vw",
+      "left": "437px",
+    })
 
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {
@@ -69,8 +78,43 @@ $(document).ready(function() {
                 }
               }
               console.log(results[0]);
-              $('#map').empty().append(`<a href="https://www.google.com/maps/maps/${results[0].name}${results[0].vicinity}" target="_blank"><span id="chosen-name">${results[0].name}</span><br>
-              <span id="chosen-address">${results[0].vicinity}</a></span>`);
+
+              $.ajax({
+                  "url": `https://developers.zomato.com/api/v2.1/search?q=${cuisine}&lat=${pos.lat}&lon=${pos.lng}&radius=${distance}`,
+                  headers: {
+                    "user-key": "5fb9a10ef535abdb7bbc830e44d17a8f"
+                  }
+                })
+                .done(function(result) {
+                  for (i = 0; i < result.restaurants.length; i++) {
+
+
+                    result.restaurants.sort(function(options) {
+                      return Math.random() - .5
+                    })
+                    var winner = result.restaurants[0].restaurant;
+                  }
+                  console.log(result)
+                  winner.match(function() {
+                    return winner.price_range == price;
+                  })
+                  if (result.restaurants.length > 0) {
+
+                    $('#map').empty().append(`<img id="chosen-image" src="${winner.featured_image}">
+                    <span id="chosen-name">${winner.name}</span><br>
+                  <span id="chosen-address">${winner.location.address}</span><br>
+                  <a href="https://www.google.com/maps/search/${winner.name}+${winner.location.address}" target="_blank"><span>Get Directions</span></a>`)
+                  } else {
+                    $('#map').css({
+                      "background-image": "url(http://i.imgur.com/43GQ6hb.gif)",
+                      "color": "white",
+                      "width": "500px",
+                      "height": "255px",
+                      "left": "600px",
+                    })
+                    $('#map').empty().append(`<span id="not-found">Sorry, doesn't look like there's a ${cuisine} place within ${miles} of you.</span>`)
+                  }
+                })
 
             }
           }
@@ -106,7 +150,4 @@ $(document).ready(function() {
 
 
   })
-
-
-
 });

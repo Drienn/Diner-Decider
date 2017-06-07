@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diner Decider</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <div class="row top-row">
+
+
+    <div class="col-md-2 top-left-img">
+
+    </div>
+    <header class="col-md-4">
+      <h1>Diner Decider</h1>
+    </header>
+    <div class="col-md-2 top-right-img">
+
+    </div>
+  </div>
+  <div class="container-fluid">
+
+    <div class="left-col col-md-2">
+
+    </div>
+    <div class="right-col col-md-2">
+
+    </div>
+    <div class="main-col col-md-8">
+      <div class="labels-div">
+
+
+        <label for="cuisine">Cuisine: </label><br>
+        <label for="distance">Distance:</label><br>
+        <label for="price">Price Range: </label><br>
+      </div>
+      <div class="selectors-div">
+
+
+        <select id="cuisine-select">
+          <option value="American">American</option>
+          <option value="Caribbean">Caribbean</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Thai">Thai</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Italian">Italian</option>
+          <option value="Indian">Indian</option>
+          <option value="Cajun">Cajun</option>
+          <option value="Soul">Soul</option>
+          <option value="Greek">Greek</option>
+          <option value="Mediterranean">Mediterranean</option>
+          <option value="French">French</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Korean">Korean</option>
+          <option value="Lebanese">Lebanese</option>
+          <option value="Japanese">Japanese</option>
+          <option value="German">German</option>
+      </select><br>
+        <select id="distance-select" name="price">
+      <option value="1610">1 Mile</option>
+      <option value="8050">5 Miles</option>
+      <option value="16095">10 Miles</option>
+      <option value="40235">25 Miles</option>
+    </select>
+
+        <br>
+
+
+        <select id="price-select">
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
+          </select>
+        </select>
+        <br>
+      </div>
+
+
+      <button id="submit" class="btn button" type="button" name="button">Pick Food!</button>
+      <button id="randomize" class="btn button" type="button" name="button">Let Fate Decide!<br><span><em>(randomize)</em></span></button>
+
+
+
+
+    </div>
+
+    <div id="map" class="results-container">
+      <div class="final-result">
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+</body>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" defer></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoDuNS93wLpl_DqwMDqAQNyVHnsOkaReM&libraries=places"></script>
+<script src="zomato.js" defer></script>
+<!-- <script src="script.js" defer></script> -->
+
+
+</html>
