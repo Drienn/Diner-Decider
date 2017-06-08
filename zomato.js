@@ -102,7 +102,7 @@ $(document).ready(function() {
                       "background-color": "white",
                     })
                     $('#map').css({
-                      "background-image": `url(pictures/${cuisine}.gif)`,
+                      "background-image": `url(flags/${cuisine}.gif)`,
                       "background-repeat": "no-repeat",
                       "background-size": "100% 100%",
                     })
