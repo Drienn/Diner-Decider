@@ -1,8 +1,6 @@
 $(document).ready(function() {
   console.log("ready!");
 
-
-
   var infowindow;
 
   $('#submit').click(function() {
@@ -10,9 +8,8 @@ $(document).ready(function() {
     var distance = $('#distance-select').val();
     var cuisine = $('#cuisine-select').val();
     var miles = $('#distance-select option:selected').text();
+
     $('#map').css({
-      "background-image": "none",
-      "background-color": "white",
       "color": "black",
       "height": "28vh",
       "width": "48vw",
@@ -95,15 +92,20 @@ $(document).ready(function() {
                     var winner = result.restaurants[0].restaurant;
                   }
                   console.log(result)
-                  winner.match(function() {
-                    return winner.price_range == price;
-                  })
+
                   if (result.restaurants.length > 0) {
 
-                    $('#map').empty().append(`<img id="chosen-image" src="${winner.featured_image}">
-                    <span id="chosen-name">${winner.name}</span><br>
+                    $('#map').empty().append(`<span id="chosen-name">${winner.name}</span><br>
                   <span id="chosen-address">${winner.location.address}</span><br>
                   <a href="https://www.google.com/maps/search/${winner.name}+${winner.location.address}" target="_blank"><span>Get Directions</span></a>`)
+                    $('#map span').css({
+                      "background-color": "white",
+                    })
+                    $('#map').css({
+                      "background-image": `url(pictures/${cuisine}.gif)`,
+                      "background-repeat": "no-repeat",
+                      "background-size": "100% 100%",
+                    })
                   } else {
                     $('#map').css({
                       "background-image": "url(http://i.imgur.com/43GQ6hb.gif)",
