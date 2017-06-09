@@ -1,6 +1,4 @@
-html {
-  height: 91vh;
-}
+html {}
 
 * {
   font-family: sans-serif;
@@ -23,6 +21,7 @@ a {
 }
 
 body {
+  background-color: teal;
   margin: 0px;
   height: 100%;
   width: 100vw;
@@ -86,7 +85,9 @@ header h1 {
   background-size: 100% 100%;
   float: left;
   display: inline;
-  margin: 50px;
+  position: absolute;
+  top: 20%;
+  left: 3%;
   overflow-y: hidden;
   -webkit-animation: 100s scroll infinite linear;
   -moz-animation: 100s scroll infinite linear;
@@ -103,7 +104,8 @@ header h1 {
   background-size: 100% 100%;
   position: absolute;
   display: inline-block;
-  margin: 5% 7%;
+  top: 25%;
+  right: 25%;
 }
 
 label {
@@ -122,6 +124,8 @@ select {
 
 .selectors-div {
   float: left;
+  margin-left: 5%;
+  display: inline-block;
 }
 
 @-webkit-keyframes scroll {
@@ -166,7 +170,9 @@ select {
   background-attachment: scroll;
   float: right;
   display: inline;
-  margin: 50px;
+  position: absolute;
+  top: 20%;
+  right: 3%;
   overflow-y: hidden;
   -webkit-animation: 100s scroll infinite linear;
   -moz-animation: 100s scroll infinite linear;
@@ -192,7 +198,7 @@ select {
   outline: none;
   position: absolute;
   bottom: 14%;
-  margin: 0px aut
+  right: 38%;
 }
 
 button {
@@ -207,7 +213,6 @@ button {
   height: 28vh;
   width: 48vw;
   border-radius: 10px;
-  margin: 50px auto;
 }
 
 .final-result {

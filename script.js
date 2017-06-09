@@ -14,9 +14,9 @@ $(document).ready(function() {
     $('#map').css({
       "border": "2px solid black",
       "position": "absolute",
-      "bottom": "0px",
+      "bottom": "1%",
+      "right": "26%",
       "display": "inline-block",
-      "margin": "-1% 8%",
       "color": "black",
       "height": "28vh",
       "width": "48vw",
@@ -115,9 +115,9 @@ $(document).ready(function() {
                     "background-size": "100% 100%",
                     "color": "white",
                     "position": "absolute",
-                    "bottom": "0px",
+                    "bottom": "1%",
+                    "right": "26%",
                     "display": "inline-block",
-                    "margin": "-1% 8%",
                     "height": "28vh",
                     "width": "48vw",
                   })
@@ -136,11 +136,11 @@ $(document).ready(function() {
             "background-size": "100% 100%",
             "color": "white",
             "position": "absolute",
-            "bottom": "0px",
+            "left": "26%",
+            "bottom": "1%",
             "display": "inline-block",
-            "margin": "-1% 8%",
-            "height": "28vh",
-            "width": "48vw",
+            "height": "28%",
+            "width": "48%",
           })
         $('#map').append(`<span id="chosen-name">Location Services Required</span>`)
       });
