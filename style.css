@@ -1,3 +1,7 @@
+html {
+  height: 91vh;
+}
+
 * {
   font-family: sans-serif;
   margin: 0px;
@@ -9,10 +13,9 @@ a {
 }
 
 .top-row {
-  position: relative;
+  border-bottom: 2px solid black;
   background-image: url(pictures/top-row.png);
   background-size: 100% 100%;
-  background-position: top center;
 }
 
 .row {
@@ -20,13 +23,8 @@ a {
 }
 
 body {
-  background-image: url(pictures/body-background.png);
-  background-repeat: no-repeat;
-  background-position: 926px -265px;
-  background-color: grey;
-  background-size: 499px 567px;
   margin: 0px;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -98,6 +96,7 @@ header h1 {
 }
 
 .main-col {
+  border: 2px solid black;
   width: 50vw;
   height: 45vh;
   background-image: url(https://media.sandiegoreader.com/img/photos/2016/12/31/ponsatys_dining_room_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d);
@@ -113,6 +112,7 @@ label {
 }
 
 select {
+  border: 2px solid black;
   margin: 10px 0px 17px 5px;
 }
 
@@ -184,6 +184,7 @@ select {
 }
 
 #submit {
+  border: 2px solid black;
   background-color: grey;
   color: white;
   position: absolute;
@@ -215,14 +216,14 @@ button span {
 
 #chosen-name {
   text-align: center;
-  font-size: 50px;
+  font-size: 200%;
 }
 
 #chosen-address {
   text-align: center;
-  font-size: 35px;
+  font-size: 150%;
 }
 
 #not-found {
-  font-size: 25px;
+  font-size: 200%;
 }

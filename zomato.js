@@ -10,6 +10,7 @@ $(document).ready(function() {
     var miles = $('#distance-select option:selected').text();
 
     $('#map').css({
+      "border": "2px solid black",
       "position": "absolute",
       "bottom": "0px",
       "display": "inline-block",
@@ -118,7 +119,7 @@ $(document).ready(function() {
                       "position": "absolute",
                       "bottom": "0px",
                       "display": "inline-block",
-                      "margin": "5% 5%",
+                      "margin": "-1% 8%",
                       "height": "28vh",
                       "width": "48vw",
                     })
