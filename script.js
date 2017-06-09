@@ -110,7 +110,7 @@ $(document).ready(function() {
                   })
                 } else {
                   $('#map').css({
-                    "background-image": "url(http://i.imgur.com/43GQ6hb.gif)",
+                    "background-image": "url(pictures/notfound.gif)",
                     "background-repeat": "no-repeat",
                     "background-size": "100% 100%",
                     "color": "white",
