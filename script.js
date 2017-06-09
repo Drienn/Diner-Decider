@@ -142,6 +142,7 @@ $(document).ready(function() {
             "height": "28vh",
             "width": "48vw",
           })
+        $('#map').append(`<span id="chosen-name">Location Services Required</span>`)
       });
       //     function() {
       //       handleLocationError(true, infoWindow, map.getCenter());
