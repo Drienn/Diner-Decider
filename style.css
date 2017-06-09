@@ -86,7 +86,7 @@ header h1 {
   float: left;
   display: inline;
   position: absolute;
-  top: 20%;
+  top: 22%;
   left: 3%;
   overflow-y: hidden;
   -webkit-animation: 100s scroll infinite linear;
@@ -171,7 +171,7 @@ select {
   float: right;
   display: inline;
   position: absolute;
-  top: 20%;
+  top: 22%;
   right: 3%;
   overflow-y: hidden;
   -webkit-animation: 100s scroll infinite linear;
