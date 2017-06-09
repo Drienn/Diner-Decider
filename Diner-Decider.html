@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script language="JavaScript">
+    function redirectHttpToHttps() {
+      var httpURL = window.location.hostname + window.location.pathname + window.location.search;
+      var httpsURL = "https://" + httpURL + "/diner-decider.html";
+      window.location = httpsURL;
+    }
+    redirectHttpToHttps();
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Diner Decider</title>
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
+
 </head>
 
 <body>
