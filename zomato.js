@@ -10,10 +10,13 @@ $(document).ready(function() {
     var miles = $('#distance-select option:selected').text();
 
     $('#map').css({
+      "position": "absolute",
+      "bottom": "0px",
+      "display": "inline-block",
+      "margin": "-1% 4%",
       "color": "black",
       "height": "28vh",
       "width": "48vw",
-      "left": "437px",
     })
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -109,10 +112,15 @@ $(document).ready(function() {
                   } else {
                     $('#map').css({
                       "background-image": "url(http://i.imgur.com/43GQ6hb.gif)",
+                      "background-repeat": "no-repeat",
+                      "background-size": "100% 100%",
                       "color": "white",
-                      "width": "500px",
-                      "height": "255px",
-                      "left": "600px",
+                      "position": "absolute",
+                      "bottom": "0px",
+                      "display": "inline-block",
+                      "margin": "5% 5%",
+                      "height": "28vh",
+                      "width": "48vw",
                     })
                     $('#map').empty().append(`<span id="not-found">Sorry, doesn't look like there's a ${cuisine} place within ${miles} of you.</span>`)
                   }
