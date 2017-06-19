@@ -1,4 +1,19 @@
-html {}
+html {
+  height: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .left-col {
+    display: none !important;
+  }
+  .right-col {
+    display: none !important;
+  }
+  .main-col {
+    width: 63% !important;
+    right: 8% !important;
+  }
+}
 
 * {
   font-family: sans-serif;
@@ -24,7 +39,7 @@ body {
   background-color: teal;
   margin: 0px;
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 
 header {
@@ -74,12 +89,13 @@ header h1 {
   height: 100%;
   width: 100%;
   background-color: teal;
+  text-align: center;
 }
 
 .left-col {
   border: 3px solid black;
-  width: 11.2vw;
-  height: 74.5vh;
+  width: 14.2em;
+  height: 43.5em;
   background-color: pink;
   background-image: url(pictures/left-banner.png);
   background-size: 100% 100%;
@@ -98,14 +114,15 @@ header h1 {
 
 .main-col {
   border: 2px solid black;
-  width: 50vw;
-  height: 45vh;
+  width: 47%;
+  height: 18em;
   background-image: url(https://media.sandiegoreader.com/img/photos/2016/12/31/ponsatys_dining_room_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d);
   background-size: 100% 100%;
+  margin: 0px 10% 0px 10%;
   position: absolute;
   display: inline-block;
   top: 23%;
-  right: 25%;
+  right: 16%;
 }
 
 label {
@@ -160,8 +177,8 @@ select {
 
 .right-col {
   border: 3px black solid;
-  width: 11.2vw;
-  height: 74.5vh;
+  width: 14.2em;
+  height: 43.5em;
   background-image: url(pictures/right-banner.jpg);
   background-color: #008080;
   background-attachment: scroll;
@@ -181,16 +198,8 @@ select {
   animation: 100s scroll infinite linear;
 }
 
-#right-pic {
-  width: 11.2vw;
-  height: 600px;
-  text-align: center;
-  position: relative;
-  right: 15px;
-}
-
 #submit {
-  width: 25%;
+  width: 50%;
   border: 2px solid black;
   background-color: grey;
   color: white;
@@ -198,7 +207,7 @@ select {
   outline: none;
   position: absolute;
   bottom: 5%;
-  right: 38%;
+  right: 24%;
 }
 
 button {
